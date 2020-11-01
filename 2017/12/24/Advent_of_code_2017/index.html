@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Advent of code 2017 - Day 1 | KK&#39;S BLOG</title>
+
+  
+  <meta name="author" content="KK">
+  
+
+  
+  <meta name="description" content="Here is my personal blog, welcome~">
+  
+
+  
+  
+  <meta name="keywords" content="chaos,algorithm">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Advent of code 2017 - Day 1"/>
+
+  <meta property="og:site_name" content="KK&#39;S BLOG"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="KK&#39;S BLOG" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">KK&#39;S BLOG</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/tags">标签</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Advent of code 2017 - Day 1</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/24/Advent_of_code_2017/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-24T15:19:16.000Z">
+          2017-12-24
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>今天阅读RSS订阅的时候，注意到有一篇文章，里面有一个有趣的网址。<br><a target="_blank" rel="noopener" href="http://adventofcode.com">Advent of code 2017</a><br>网站是英文的，网站的大概意思是：<br>圣诞老人小精灵找到你，说圣诞老人的打印机坏啦，离午夜还有15millisecond了。让你帮忙修好，说完你就变小了，进入到了计算机的世界。<br>网站提供了15天的题目，每天的题目都分为两部分，解出来一部分以后可以拿到一颗🌟，第一天的题目是：</p>
+<blockquote>
+<p>The captcha requires you to review a sequence of digits (your puzzle input) and find the sum of all digits that match the next digit in the list. The list is circular, so the digit after the last digit is the first digit in the list.</p>
+</blockquote>
+<p>大概意思就是，有一串连续的数字，然后让我们找出和后面一个数字相同的的数字的和。串是环形的，所以最后一个数字的后一个数字是数字串的第一个数字。<br>题目很简单啊，当时就三下五除二，写出了解：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="string">&quot;1122&quot;</span> <span class="comment">// answer should be 3.</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">c</span> <span class="keyword">in</span> s.enumerated() &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">c</span>.offset == s.<span class="built_in">count</span> - <span class="number">1</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">c</span>.element == s[s.startIndex] &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">c</span>.element == s[s.index(s.startIndex, offsetBy: <span class="built_in">c</span>.offset + <span class="number">1</span>)]) &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看起来没什么毛病，测试样例也能过。<br>然后得到了Part 2，题目变成了：</p>
+<blockquote>
+<p>Now, instead of considering the next digit, it wants you to consider the digit halfway around the circular list. That is, if your list contains 10items, only include a digit in your sum if the digit 10/2 = 5 steps forward match it. Fortunately, your list has an even number of elements.</p>
+</blockquote>
+<p>emmmmmmm…<br>总的来说题目没怎么变化，但是现在不是求后面一个数字，而是求数字串一般长度的距离的那个数字。<br>其实也很简单，按照上面的思路，改一改就能过了。<br>但是这让我开始思考，第二部分和第一部分明明是同一个题目对应了不同的距离而已，而当时在写第一部分代码的时候，我却没有考虑过代码的扩展性。看到第二部分之后，想到我们可以把距离提成一个单独的变量，作为代码中一个可配置的点，这样无论距离怎么变，我们只需要修改距离变量，而不用改动其他代码。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="string">&quot;1122&quot;</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">let</span> step = s.<span class="built_in">count</span> / <span class="number">2</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">c</span> <span class="keyword">in</span> s.enumerated() &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">c</span>.offset + step &gt; s.<span class="built_in">count</span> - <span class="number">1</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">c</span>.element == s[s.index(s.startIndex, offsetBy: <span class="built_in">c</span>.offset + step - s.<span class="built_in">count</span>)]) &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">c</span>.element == s[s.index(s.startIndex, offsetBy: <span class="built_in">c</span>.offset + step)]) &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/chaos/">chaos</a><a href="/tags/algorithm/">algorithm</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+	<section id="comment" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
+	<script type="text/javascript">
+	var disqus_shortname = 'kricsblog';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	</script>
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2020 KK
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-70762198-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+    
+  </div>
+</div>
+</body>
+</html>

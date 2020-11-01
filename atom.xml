@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KK&#39;S BLOG</title>
+  
+  
+  <link href="https://halftrue.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://halftrue.github.io/"/>
+  <updated>2020-11-01T07:29:06.621Z</updated>
+  <id>https://halftrue.github.io/</id>
+  
+  <author>
+    <name>KK</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>upgrade git</title>
+    <link href="https://halftrue.github.io/2019/12/23/upgrade-git/"/>
+    <id>https://halftrue.github.io/2019/12/23/upgrade-git/</id>
+    <published>2019-12-23T14:13:50.000Z</published>
+    <updated>2020-11-01T07:29:06.621Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="升级系统-Git"><a href="#升级系统-Git" class="headerlink" title="升级系统 Git"></a>升级系统 Git</h1><p>首先检查一下当前的 Git Version：<code>git --version</code></p><p>可能会输出如下字段：</p><p><code>git version 2.21.0 (Apple Git-122.2)</code></p><p>如果觉得版本过旧，可以使用<code>xcode-select --install</code>进行升级。</p><p>这个命令会帮你升级到最新的<code>Xcode Command Line Tools</code>，这里面就包含了最新的 Git。</p><p>如果已经安装高版本的 Xcode，可以使用<code>sudo xcode-select -switch /Applications/Xcode.app</code>，从而可以使用Xcode里面自带的<code>Xcode Command Line Tools</code>。</p><h1 id="升级-Homebrew-Git"><a href="#升级-Homebrew-Git" class="headerlink" title="升级 Homebrew Git"></a>升级 Homebrew Git</h1><p>如果是通过 Homebrew 安装的 git，直接使用 <code>brew upgrade git</code> 即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;升级系统-Git&quot;&gt;&lt;a href=&quot;#升级系统-Git&quot; class=&quot;headerlink&quot; title=&quot;升级系统 Git&quot;&gt;&lt;/a&gt;升级系统 Git&lt;/h1&gt;&lt;p&gt;首先检查一下当前的 Git Version：&lt;code&gt;git --version&lt;/cod</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="https://halftrue.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git user name 配置</title>
+    <link href="https://halftrue.github.io/2019/12/14/git_user_name_configurations/"/>
+    <id>https://halftrue.github.io/2019/12/14/git_user_name_configurations/</id>
+    <published>2019-12-14T14:38:24.000Z</published>
+    <updated>2020-11-01T07:23:35.851Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-user-name-配置"><a href="#git-user-name-配置" class="headerlink" title="git user name 配置"></a>git user name 配置</h1><p>用公司的邮箱配置了全局的 git user name。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;xx@xx.com&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;halftrue&quot;</span></span><br></pre></td></tr></table></figure><p>但是用来提交非公司项目的时候，就会变成一个陌生人，比如 GitHub 上。</p><p>然后发现 git 配置是可以根据单独的 git 项目去做管理的，所以给自己为数不多的 git 项目配置了另外一个邮箱。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/github/project</span><br><span class="line">git config user.email <span class="string">&quot;meetxxk@gmail.com&quot;</span></span><br><span class="line">git config user.name <span class="string">&quot;halftrue&quot;</span></span><br></pre></td></tr></table></figure><p>这样提交历史里面就不会出现陌生人了。🤓</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;git-user-name-配置&quot;&gt;&lt;a href=&quot;#git-user-name-配置&quot; class=&quot;headerlink&quot; title=&quot;git user name 配置&quot;&gt;&lt;/a&gt;git user name 配置&lt;/h1&gt;&lt;p&gt;用公司的邮箱配置了全局的 g</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="https://halftrue.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如父如子</title>
+    <link href="https://halftrue.github.io/2019/08/11/%E5%A6%82%E7%88%B6%E5%A6%82%E5%AD%90/"/>
+    <id>https://halftrue.github.io/2019/08/11/%E5%A6%82%E7%88%B6%E5%A6%82%E5%AD%90/</id>
+    <published>2019-08-11T13:44:54.000Z</published>
+    <updated>2020-11-01T07:21:46.873Z</updated>
+    
+    <content type="html"><![CDATA[<p>时隔一年，再次打开了尘封已久的blog，可能是个根本没人光顾的地方，但是无论如何，这是一块儿属于我的地方。我可以想写点儿什么就写点儿什么。</p><p>今天想谈谈是枝裕和的《如父如子》。今天午后困倦不堪，于是洗把脸出门去了星巴克，点了一杯本周咖啡。开始了阅读。<strong>下文剧透警告⚠️</strong></p><p>《如父如子》主要讲述了一个因为六年前的人祸，导致两个不同家庭的互相抱错了孩子。看起来是两个永远不会有交集的家庭，野野宫家以及斋木家。</p><p>野野宫良多，故事的男主之一，庆多的父亲。在故事发生以前，是一个事业发展成功，精干的优秀白领的形象。</p><p>斋木熊大，故事的另外一个男主，琉晴的父亲。他就和良多形成了鲜明的对比。住在乡下，没有正式工作，在村上靠修电器维生。</p><hr><p>故事从庆多参加完小学的入学考之后开始。彼时，庆多的妈妈绿完全沉浸在为庆多备考重点小学。当好不容易完成了考试，绿接到了来自当时生下庆多的医院的电话，说有要事要面谈。绿当时就觉得隐隐不安。</p><p>医院来人告诉他们，当时在同一个医院、同一天的出生的孩子在入学的时候，发现血型和父母匹配不上。所以告诉他们有可能抱错了孩子。当时一共有三个孩子出生，所以都通知了一下，希望能够配合去做一个亲子鉴定。</p><p>亲子鉴定的结果出来了，发现庆多不是他们的孩子，斋木家的琉晴才是。</p><p>然后，围绕着这两个家庭，故事开始展开了。</p><p>在医院的提议下，两个家庭先是见了一面。可以说第一面斋木家就给野野宫良多留下了极其不好的印象，可以说是没有什么教养。作者让我们带着这样的先入为主的印象，引入了接下来的剧情。</p><p>良多在上司的建议下，想争取把两个孩子都要过来。（读到这里，我一开始还觉得好像也挺好的）</p><p>随着时间慢慢流逝，两个家庭开始让孩子互相留宿，让两个孩子先适应一下。</p><p>在这个过程中，作者的细腻的描写，会开始让人觉得原来熊大也有好的一面。斋木家庭仿佛更加有人情味。</p><p>良多争取两个孩子的计划也落空了。</p><p>中间突然插入了良多的父亲，在和他父亲见过一面之后，良多突然觉得还是应该交换的，毕竟血缘更大。</p><p>然后琉晴就来到了野野宫家。这时良多仍然忙于工作，全靠绿一个人在家照看琉晴。家庭里面的关系还是有些僵硬的，中间琉晴还一个人跑回了斋木家。</p><p>把琉晴从斋木家接回去，良多也被上司派到了养老的职位上去了。良多虽然很不甘，但是他也正好有了更多的时间陪伴琉晴。在和琉晴玩耍的过程中，他们的隔阂开始溶解。</p><p>于是他和绿也相通了，还是和斋木家将孩子交换回来了。交换当天，两家也特别的有默契，谁也没提过反对意见，就很自然的接回了各自的孩子。</p><hr><p>看完。我个人感受是人真的很容易变成自己讨厌的样子。良多小时候很讨厌父亲，因为他也有一个继母，他父亲会强迫他叫继母为母亲，但是良多就是不愿意，直到42岁的今天才有所瓦解。而琉晴也是很不愿意称呼他为父亲、绿为母亲。他一开始也有些强迫性的语气，但是琉晴就是不愿意。知道他真的有时间陪伴琉晴玩耍的时候，绿第一次叫了琉晴为小琉，琉晴也第一次叫了他们父亲，母亲。</p><p>所以还有一点就是，陪伴才是爱，血缘不是。你需要拿出时间，而不是单纯因为血缘。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;时隔一年，再次打开了尘封已久的blog，可能是个根本没人光顾的地方，但是无论如何，这是一块儿属于我的地方。我可以想写点儿什么就写点儿什么。&lt;/p&gt;
+&lt;p&gt;今天想谈谈是枝裕和的《如父如子》。今天午后困倦不堪，于是洗把脸出门去了星巴克，点了一杯本周咖啡。开始了阅读。&lt;stron</summary>
+      
+    
+    
+    
+    
+    <category term="books" scheme="https://halftrue.github.io/tags/books/"/>
+    
+    <category term="reading" scheme="https://halftrue.github.io/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My year of 2018</title>
+    <link href="https://halftrue.github.io/2018/12/31/my-year-of-2018/"/>
+    <id>https://halftrue.github.io/2018/12/31/my-year-of-2018/</id>
+    <published>2018-12-31T04:50:25.000Z</published>
+    <updated>2020-11-01T07:20:53.004Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h1><p>告别2018，迎来2019😋<br>寂寞如旧，让人无可奈何☹️<br>连写一篇年度总结的心情也没有😑<br>从18-19，改变的是什么🧐<br>枯坐于电脑之前，静静悄悄的IM😴<br>打开一个视频，选择逃避😶<br>还是没有弄清自己的真正的想法🤯<br>或许还是对自己不够诚实😳<br>变得坦诚一点儿是不是会更好🤪</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2018&quot;&gt;&lt;a href=&quot;#2018&quot; class=&quot;headerlink&quot; title=&quot;2018&quot;&gt;&lt;/a&gt;2018&lt;/h1&gt;&lt;p&gt;告别2018，迎来2019😋&lt;br&gt;寂寞如旧，让人无可奈何☹️&lt;br&gt;连写一篇年度总结的心情也没有😑&lt;br&gt;从18-19</summary>
+      
+    
+    
+    
+    
+    <category term="summary" scheme="https://halftrue.github.io/tags/summary/"/>
+    
+    <category term="life" scheme="https://halftrue.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谈谈咖啡</title>
+    <link href="https://halftrue.github.io/2018/05/30/%E8%B0%88%E8%B0%88%E5%92%96%E5%95%A1/"/>
+    <id>https://halftrue.github.io/2018/05/30/%E8%B0%88%E8%B0%88%E5%92%96%E5%95%A1/</id>
+    <published>2018-05-30T08:32:55.000Z</published>
+    <updated>2020-11-01T07:21:38.289Z</updated>
+    
+    <content type="html"><![CDATA[<p>从我第一次开始接触起咖啡，到现在已经是过了三四个年头了。最早接触咖啡是在高中的时候吧，喝那种一块钱一条的速溶咖啡，那时候对咖啡的认识就仅仅停留在提神、雀巢这几个简单的印象。</p><p>上大学了之后，又多喝了几种不同牌子的速溶咖啡，像是麦斯威尔、G7，但是也仅限于速溶咖啡。然后在去年出去实习的时候，第一次去星巴克喝了红茶拿铁，当时年轻的我并不知道星巴克的拿铁里面并没有咖啡- -。然后爱上了那种味道，尝试了其他的品种之后，决定尝一尝最原本的拿铁。</p><p>拿铁最初给我的味觉上的感觉并没有红茶拿铁来得令人开心，大概是少了很多糖🍬的原因吧，后来也慢慢习惯了拿铁的滋味。</p><p>住在北京的时候离星巴克超远的，只有在上班的时候，途中顺路买上那么一杯。</p><p>而离我家近的能够获取到咖啡的地方，竟然是一家KFC。但是尝过几次他们家的榛果拿铁、焦糖拿铁之后，开始觉得很失望，KFC的拿铁的糖像是不要钱一样，几次喝他们的拿铁总是能把我给腻到。</p><p>后来随着我对周边的探索，发现了味多美这家面包店。顺带一提，我超喜欢吃他们家的糕点。买过几次面包之后，我开始对他们的咖啡有点儿好奇，就还是从拿铁开始，尝试了一下，觉得还不错，咖啡和牛奶的量比控制得很不错，加上他们家的面包真的很配。</p><p>然后说咖啡，就不能不说最常说起的美式。</p><p>最早接触起美式是在北京工作的时候，公司有一台咖啡机，不知道是哪里的豆子，也不知道咖啡机的牌子，反正那是我第一次喝到一杯美式，年轻的我第一次被苦到不能呼吸。即使加了很多糖也不能达到我印象中速溶咖啡的甜度，所以，那时候的我，开始思考起，平日喝的速溶咖啡里究竟有多少的糖。之后也在渐渐的控制喝速溶咖啡的量。</p><p>继续说美式，之后在星巴克喝了他们家的美式咖啡。但是还是会忍不住放点儿糖，一杯大杯的美式我会放一包糖吧，说到底还是当时不太习惯咖啡的苦涩。</p><p>就这么喝了很久的咖啡。</p><p>有时候喝点儿美式，有时候喝点儿拿铁。</p><p>也买过雀巢和麦斯威尔的黑咖啡，买了点儿太古的方糖，自己冲起来喝，省得想喝咖啡的时候还得跑个大远去买。但是就出现个很纠结的情况，自己冲的咖啡不加糖喝的时候会很苦，加了糖的话，喝完嘴里会有苦涩的感觉= =。喝了几次之后，觉得不加糖的时候的苦涩的感觉会比较好受一点儿。所以，那次买的方糖到现在还剩了很多，咖啡倒是喝了不少了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;从我第一次开始接触起咖啡，到现在已经是过了三四个年头了。最早接触咖啡是在高中的时候吧，喝那种一块钱一条的速溶咖啡，那时候对咖啡的认识就仅仅停留在提神、雀巢这几个简单的印象。&lt;/p&gt;
+&lt;p&gt;上大学了之后，又多喝了几种不同牌子的速溶咖啡，像是麦斯威尔、G7，但是也仅限于速溶咖啡</summary>
+      
+    
+    
+    
+    
+    <category term="starbucks" scheme="https://halftrue.github.io/tags/starbucks/"/>
+    
+    <category term="coffee" scheme="https://halftrue.github.io/tags/coffee/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My year of 2017</title>
+    <link href="https://halftrue.github.io/2017/12/31/my-year-of-2017/"/>
+    <id>https://halftrue.github.io/2017/12/31/my-year-of-2017/</id>
+    <published>2017-12-31T05:02:56.000Z</published>
+    <updated>2020-11-01T07:29:43.527Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2017"><a href="#2017" class="headerlink" title="2017"></a>2017</h1><p>不知不觉，一年又过去了。</p><p>今天是12.31了，17年的最后一天了。这一年过得超快，完全没有实感。</p><p>今年年初的时候想着要找工作了，就开始各种看书。不过，知道过完年，我记得我都在学一些对找工作没有直接帮助的东西。</p><p>年初在Coursera上学了一门Programming Languages的课程，三个part，现在时还剩一个part c没学，说起来也是挺有趣的课程。看完之后觉得自己对递归的理解更加深刻了一些。</p><p>今年3月初的时候来到了北京，去了链家网做iOS开发实习。</p><p>现在想起来真是超级激动的一件事，从学校出来，进入到一个大企业做开发，体验也是极好的。就这么一直实习实习着，实习到了现在。</p><p>顺带一提，链家网的实习工资真的高，300一天，生活水平一下有了质的飞跃23333。</p><p>实习的日子的记忆不是特别清晰了，这大半年确实自己的技术方面有较大的长进吧。</p><p>现在想来学习的曲线就是一个log函数，刚开始增长的很快，到后面增长就越来越慢了。</p><h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><ol><li><p>实习了这么久，积累起了一点小钱儿，开始学习理财了，现在的大约的收益只是略高于货币基金的收益，还得努力学习学习。股票还是不怎么敢碰，或者说不太敢碰国内的A股，美股开户貌似很麻烦。。。So…</p><p>因为国内的科技公司大部分都在港股或者美股上市，对其他行业也不是很了解。</p><p>我的投资策略其实相当笨拙，投了一点指数基金。</p></li><li><p>另外一个收获应该是双拼吧，大约花了一个下午多一点的时间了解了双拼，然后就全线切到了双拼，花了一周的时间熟悉了双拼。然后不知道花了多久，双拼的速度才开始追上了原来全拼的速度，现在双拼的速度也已经快过当初全拼的速度了。我的双拼方案是使用的iOS11内置的方案，也就是搜狗双拼。</p></li><li><p>接上去年的进展，今年的读书也有所长进。（开始准备是等豆瓣的年度总结出来之后再写的，但是今年的豆瓣读书的报告不知道为什么到现在还没出。。）<br>今年到现在一共读了32本书，书的种类也从去年的东野圭吾书迷到今年东野圭吾的书只有5本。<br>总的来说还是小说多一点儿。<br>今年读完印象最为深刻的应该就是1984了。<br>也跟风读了今年诺奖得主石黑一雄的被掩埋的巨人。个人倒也不是特别喜欢他的风格。</p></li><li><p>技术方面的长进<br>熟练<br>全面<br>大约就是这两点了，这快10个月的实习写的代码超过了我学生时代的总和。开始注意起代码风格、一些原理层面的东西。技术开始往全面发展了，了解了许多平台相关的技术。</p></li><li><p>美团。在秋招已经结束之际，拿到了美团的offer，可以说相当lucky了。9、10月份的时候是想着就待在链家的，但是等到10月快结束之际，看着身边的朋友，一起在链家实习的同学都找到了更好的工作，不由得开始对现在的工作感到不满足了，就试着投了一投，从第一份简历发出10.28到美团的offer11.22，经历了快两个月的时间，可以说是很艰难了。一是大厂的秋招都结束了，补招的岗位都变得特别少，二是，不知道是不是我的错觉，补招的要求是乎也变严格了。</p></li></ol><h2 id="关于去年的愿望"><a href="#关于去年的愿望" class="headerlink" title="关于去年的愿望"></a>关于去年的愿望</h2><ul><li>健身。一点儿也没长进，不过倒是没变胖，还瘦了一些</li><li>工作。现在的工作还算满意吧。🤠</li><li>机械键盘。已经不想要机械键盘了。想买苹果的Magic Keyboard⌨️</li><li>读书。有条不紊的进步～</li></ul><h2 id="愿望"><a href="#愿望" class="headerlink" title="愿望"></a>愿望</h2><ul><li style="list-style: none"><input type="checkbox"></input> 读书 30 本+</li><li style="list-style: none"><input type="checkbox"></input> 写博客 10 篇+（技术）</li><li style="list-style: none"><input type="checkbox"></input> 尝试下技术方向的转型</li><li style="list-style: none"><input type="checkbox"></input> 或者更加精进</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2017&quot;&gt;&lt;a href=&quot;#2017&quot; class=&quot;headerlink&quot; title=&quot;2017&quot;&gt;&lt;/a&gt;2017&lt;/h1&gt;&lt;p&gt;不知不觉，一年又过去了。&lt;/p&gt;
+&lt;p&gt;今天是12.31了，17年的最后一天了。这一年过得超快，完全没有实感。&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+    <category term="summary" scheme="https://halftrue.github.io/tags/summary/"/>
+    
+    <category term="life" scheme="https://halftrue.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Advent of code 2017 - Day 1</title>
+    <link href="https://halftrue.github.io/2017/12/24/Advent_of_code_2017/"/>
+    <id>https://halftrue.github.io/2017/12/24/Advent_of_code_2017/</id>
+    <published>2017-12-24T15:19:16.000Z</published>
+    <updated>2020-11-01T07:23:16.372Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天阅读RSS订阅的时候，注意到有一篇文章，里面有一个有趣的网址。<br><a href="http://adventofcode.com">Advent of code 2017</a><br>网站是英文的，网站的大概意思是：<br>圣诞老人小精灵找到你，说圣诞老人的打印机坏啦，离午夜还有15millisecond了。让你帮忙修好，说完你就变小了，进入到了计算机的世界。<br>网站提供了15天的题目，每天的题目都分为两部分，解出来一部分以后可以拿到一颗🌟，第一天的题目是：</p><blockquote><p>The captcha requires you to review a sequence of digits (your puzzle input) and find the sum of all digits that match the next digit in the list. The list is circular, so the digit after the last digit is the first digit in the list.</p></blockquote><p>大概意思就是，有一串连续的数字，然后让我们找出和后面一个数字相同的的数字的和。串是环形的，所以最后一个数字的后一个数字是数字串的第一个数字。<br>题目很简单啊，当时就三下五除二，写出了解：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="string">&quot;1122&quot;</span> <span class="comment">// answer should be 3.</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">c</span> <span class="keyword">in</span> s.enumerated() &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">c</span>.offset == s.<span class="built_in">count</span> - <span class="number">1</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">c</span>.element == s[s.startIndex] &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">c</span>.element == s[s.index(s.startIndex, offsetBy: <span class="built_in">c</span>.offset + <span class="number">1</span>)]) &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>看起来没什么毛病，测试样例也能过。<br>然后得到了Part 2，题目变成了：</p><blockquote><p>Now, instead of considering the next digit, it wants you to consider the digit halfway around the circular list. That is, if your list contains 10items, only include a digit in your sum if the digit 10/2 = 5 steps forward match it. Fortunately, your list has an even number of elements.</p></blockquote><p>emmmmmmm…<br>总的来说题目没怎么变化，但是现在不是求后面一个数字，而是求数字串一般长度的距离的那个数字。<br>其实也很简单，按照上面的思路，改一改就能过了。<br>但是这让我开始思考，第二部分和第一部分明明是同一个题目对应了不同的距离而已，而当时在写第一部分代码的时候，我却没有考虑过代码的扩展性。看到第二部分之后，想到我们可以把距离提成一个单独的变量，作为代码中一个可配置的点，这样无论距离怎么变，我们只需要修改距离变量，而不用改动其他代码。</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="string">&quot;1122&quot;</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">let</span> step = s.<span class="built_in">count</span> / <span class="number">2</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">c</span> <span class="keyword">in</span> s.enumerated() &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">c</span>.offset + step &gt; s.<span class="built_in">count</span> - <span class="number">1</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">c</span>.element == s[s.index(s.startIndex, offsetBy: <span class="built_in">c</span>.offset + step - s.<span class="built_in">count</span>)]) &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">c</span>.element == s[s.index(s.startIndex, offsetBy: <span class="built_in">c</span>.offset + step)]) &#123;</span><br><span class="line">            sum += <span class="type">Int</span>(<span class="type">String</span>(<span class="built_in">c</span>.element))!</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天阅读RSS订阅的时候，注意到有一篇文章，里面有一个有趣的网址。&lt;br&gt;&lt;a href=&quot;http://adventofcode.com&quot;&gt;Advent of code 2017&lt;/a&gt;&lt;br&gt;网站是英文的，网站的大概意思是：&lt;br&gt;圣诞老人小精灵找到你，说圣诞老人的打印</summary>
+      
+    
+    
+    
+    
+    <category term="chaos" scheme="https://halftrue.github.io/tags/chaos/"/>
+    
+    <category term="algorithm" scheme="https://halftrue.github.io/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Adele&#39;s Song</title>
+    <link href="https://halftrue.github.io/2017/09/20/Adele&#39;s_Song/"/>
+    <id>https://halftrue.github.io/2017/09/20/Adele&#39;s_Song/</id>
+    <published>2017-09-20T05:44:54.000Z</published>
+    <updated>2020-11-01T07:06:32.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天电台突然放到了Adele的歌，不知道有多久没有听过了，但依旧特别熟悉Adele的声音。</p><p>浑厚，有力量，有一种直击心脏的感觉。</p><p>今天听到的是Adele的Love In The Dark。</p><blockquote><p>I can’t love you in the dark<br>It feels like we’re oceans apart<br>There is so much space between us<br>Maybe we’re already defeated<br>Ah-yeah-yeah-yeah-yeah-yeah-yeah everything changed me</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天电台突然放到了Adele的歌，不知道有多久没有听过了，但依旧特别熟悉Adele的声音。&lt;/p&gt;
+&lt;p&gt;浑厚，有力量，有一种直击心脏的感觉。&lt;/p&gt;
+&lt;p&gt;今天听到的是Adele的Love In The Dark。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I can’t </summary>
+      
+    
+    
+    
+    
+    <category term="thoughts" scheme="https://halftrue.github.io/tags/thoughts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重新装修了BLOG</title>
+    <link href="https://halftrue.github.io/2017/08/16/%E9%87%8D%E6%96%B0%E8%A3%85%E4%BF%AE%E4%BA%86BLOG/"/>
+    <id>https://halftrue.github.io/2017/08/16/%E9%87%8D%E6%96%B0%E8%A3%85%E4%BF%AE%E4%BA%86BLOG/</id>
+    <published>2017-08-16T09:14:06.000Z</published>
+    <updated>2020-11-01T07:21:18.776Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实说是重新装修，倒不如说是换了一下blog的主题好了。</p><p>这次的主题来自 <a href="https://github.com/CodeDaraW/Hacker">Hacker</a> 。</p><p>相当简洁的一个主题。</p><p>博客的评论系统继续采用了Disqus。</p><p>虽然Disqus偶尔需要翻墙，但是也没有更好的替代品了。</p><p>就酱。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其实说是重新装修，倒不如说是换了一下blog的主题好了。&lt;/p&gt;
+&lt;p&gt;这次的主题来自 &lt;a href=&quot;https://github.com/CodeDaraW/Hacker&quot;&gt;Hacker&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;相当简洁的一个主题。&lt;/p&gt;
+&lt;p&gt;博客的评论系统继续</summary>
+      
+    
+    
+    
+    
+    <category term="chaos" scheme="https://halftrue.github.io/tags/chaos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无题</title>
+    <link href="https://halftrue.github.io/2017/03/02/%E6%97%A0%E5%8A%9B/"/>
+    <id>https://halftrue.github.io/2017/03/02/%E6%97%A0%E5%8A%9B/</id>
+    <published>2017-03-01T17:02:01.000Z</published>
+    <updated>2020-11-01T07:06:32.466Z</updated>
+    
+    <content type="html"><![CDATA[<p>我讨厌这种感觉<br>这种<br>当你需要放弃<br>你绝对绝对不想放弃的东西<br>的时候<br>的感觉</p><p>深深的无力感<br>不知道该向谁倾诉</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我讨厌这种感觉&lt;br&gt;这种&lt;br&gt;当你需要放弃&lt;br&gt;你绝对绝对不想放弃的东西&lt;br&gt;的时候&lt;br&gt;的感觉&lt;/p&gt;
+&lt;p&gt;深深的无力感&lt;br&gt;不知道该向谁倾诉&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="chaos" scheme="https://halftrue.github.io/tags/chaos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My year of 2016</title>
+    <link href="https://halftrue.github.io/2016/12/31/my-year-of-2016/"/>
+    <id>https://halftrue.github.io/2016/12/31/my-year-of-2016/</id>
+    <published>2016-12-31T04:50:25.000Z</published>
+    <updated>2020-11-01T07:29:47.783Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2016"><a href="#2016" class="headerlink" title="2016"></a>2016</h1><p>不知不觉，又到年末了，2016年就快过去了。</p><p>回想这一年，从1月8日的19岁，到12月27日的20岁，这一年长了两岁啊！</p><p>好像老得更快了。😑</p><p>这一年，从一个大二的，彻底变成了一个大三的老油条了。🌚</p><p>记性太差，甚至不记得上半年发生了写什么。微博也很少，空间也没发什么说说。</p><p>7、8月放假在家，学了一点node.js，看了点算法。玩了很多游戏，水了很多的群。</p><p>大三开学之后，说实话，真是感觉这学期没学什么东西。</p><p>9月划划水就那么过了，10月练习了一点算法，11月的周末被好几个比赛排满了，12月终于下定决心放弃游戏了，删掉了游戏，疯狂刷了几天题，然后又放慢了节奏。</p><p>虽说参加的比赛还是拿了一两个奖，但是这奖含金量估计就是最多在简历上提一下罢了。</p><p>学习的过程就感觉和下图一样：</p><p><img src="http://ww1.sinaimg.cn/mw690/7fd54a81jw1f8hj1jsctxj20go0ibdhu.jpg" alt="image"></p><p>突然发现自己已经迷茫了一学期了。= =。</p><h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>再谈一谈读书这件事，这学期技术书籍没看几本。小说却是看了不少。</p><p>暑假之前，我看的书的画风就分为： 东野圭吾-非东野圭吾</p><p>暑假认识了一个学妹，🤣然后被安利了一些日本文学，算是开阔了视野把。</p><p>粗略估计的话，这一年的读非技术书籍的时间应该差不多100小时左右，技术书籍的话，时间应该只多不少。</p><p>但是技术书就是读得很慢，500页+的大部头应该读完了三本把，剩下簿一点的读了四五本。</p><p>技术书的另外一大部份来源是电子书（买得起的就支持正版咯。。。不过是真心贵），读完了的大概也是三本。</p><p>由于是全英文的速度就特别的慢。</p><p>不是理论的书还好，一天能够读个60-80页的样子。理论性比较重的书就只能看缘分了。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>这一年写的代码不是很多，而且写得很杂，写iOS用Objective-C、Swift，写学年设计用的Node.js，写编译原理的用的Python，写算法题用C/C++。</p><p>除去写iOS的比较熟以外，其他都是写到哪儿查到哪儿，怎么开心怎么写，能用新特性就上新特性。</p><p>比如JS的异步控制，py的lamdba表达式之类的。</p><p>也算是一个不错的体验。</p><p>我发现语言这东西不用真的很容易忘。半年前学过的go、ruby现在基本也忘光了。（就不提大二学过的Java了。。</p><h2 id="关于去年的愿望"><a href="#关于去年的愿望" class="headerlink" title="关于去年的愿望"></a>关于去年的愿望</h2><p>⭕ Apple设备已经凑齐。// 召唤神龙？</p><p>⭕ 读书。 感觉量不太够啊，希望来年多读一点书把。重心应该在技术与非技术之间保持平衡。</p><p>❌ 健身。 // 至少没长肥肉？</p><p>❌ 外置显示器。 = =。那家伙在寝室根本放不下啊。</p><h1 id="2017"><a href="#2017" class="headerlink" title="2017"></a>2017</h1><p>又是新的一年了，希望2017年，技术更加的厉害，知识面更加的广泛。</p><p>女朋友 ？ // 女朋友是啥？</p><h2 id="愿望"><a href="#愿望" class="headerlink" title="愿望"></a>愿望</h2><ul><li><p>找工作。</p></li><li><p>认识厉害的人。</p></li><li><p>健身。</p></li><li><p>一块新的机械键盘。</p></li><li><p>读书。</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;2016&quot;&gt;&lt;a href=&quot;#2016&quot; class=&quot;headerlink&quot; title=&quot;2016&quot;&gt;&lt;/a&gt;2016&lt;/h1&gt;&lt;p&gt;不知不觉，又到年末了，2016年就快过去了。&lt;/p&gt;
+&lt;p&gt;回想这一年，从1月8日的19岁，到12月27日的20岁，这一年长</summary>
+      
+    
+    
+    
+    
+    <category term="summary" scheme="https://halftrue.github.io/tags/summary/"/>
+    
+    <category term="life" scheme="https://halftrue.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Take a Snapshot of a UIView</title>
+    <link href="https://halftrue.github.io/2016/08/17/Take-a-Snapshot-of-a-UIView/"/>
+    <id>https://halftrue.github.io/2016/08/17/Take-a-Snapshot-of-a-UIView/</id>
+    <published>2016-08-17T07:27:39.000Z</published>
+    <updated>2020-11-01T07:06:32.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sometimes, you may need generate an image of a view to share or somethings you need a picture.</p><p>So, here is the way to do this.</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> frame <span class="comment">// the frame of the Snapshot.</span></span><br><span class="line"><span class="keyword">var</span> view <span class="comment">// the view you want to take a snapshot.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="type">UIScreen</span>.mainScreen().scale &gt; <span class="number">1</span> &#123;</span><br><span class="line">    <span class="type">UIGraphicsBeginImageContextWithOptions</span>(frame.size, <span class="literal">false</span>, <span class="type">UIScreen</span>.mainScreen().scale)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="type">UIGraphicsBeginImageContext</span>(frame.size)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> context = <span class="type">UIGraphicsGetCurrentContext</span>()</span><br><span class="line"></span><br><span class="line"><span class="type">CGContextTranslateCTM</span>(context, -frame.minX, -frame.minY)</span><br><span class="line"></span><br><span class="line">view.layer.renderInContext(context!)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> image = <span class="type">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line"></span><br><span class="line"><span class="type">UIGraphicsEndImageContext</span>()</span><br><span class="line"></span><br><span class="line">imageView.image = image</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>Things has been done.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Sometimes, you may need generate an image of a view to share or somethings you need a picture.&lt;/p&gt;
+&lt;p&gt;So, here is the way to do this.&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="UIView" scheme="https://halftrue.github.io/tags/UIView/"/>
+    
+    <category term="UIImage" scheme="https://halftrue.github.io/tags/UIImage/"/>
+    
+    <category term="iOS" scheme="https://halftrue.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo安装问题一则</title>
+    <link href="https://halftrue.github.io/2015/10/11/hexo%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E4%B8%80%E5%88%99/"/>
+    <id>https://halftrue.github.io/2015/10/11/hexo%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98%E4%B8%80%E5%88%99/</id>
+    <published>2015-10-11T04:46:02.000Z</published>
+    <updated>2020-11-01T07:06:32.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>安装完hexo之后，虽然能够正常的写作，部署。但是每次都会出现如下错误。</p><p>PS:此问题仅在OS X情况下出现</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [Error: Cannot find module <span class="string">&#x27;./build/Release/DTraceProviderBindings&#x27;</span>] code: <span class="string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;</span><br><span class="line">&#123; [Error: Cannot find module <span class="string">&#x27;./build/default/DTraceProviderBindings&#x27;</span>] code: <span class="string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;</span><br><span class="line">&#123; [Error: Cannot find module <span class="string">&#x27;./build/Debug/DTraceProviderBindings&#x27;</span>] code: <span class="string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;</span><br></pre></td></tr></table></figure><p>身为一个强迫症，表示不能忍。<br>最终找到一个解决方案。</p><p>Try to install with <code>--no-optional</code> option.</p><p><code>$ npm install hexo --no-optional</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;安装完hexo之后，虽然能够正常的写作，部署。但是每次都会出现如下错误。&lt;/p&gt;
+&lt;p&gt;PS:此问题仅在OS X情况下出现&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="https://halftrue.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
